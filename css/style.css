@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #f3f3f3;
+}
+
+.topo{
+    top: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.section{
+    width: 100%;
+    margin: 25% 0;
+}
+
+.caixa-mensagem{
+    display: flex;
+    padding: 10px 0;
+    margin-bottom: 5px;
+}
+
+.caixa-mensagem .timer{
+    margin-left: 05px;
+}
+.caixa-mensagem .nome{
+    margin-left: 05px;
+}
+.caixa-mensagem .situacao{
+    margin-left: 05px;
+}
+.caixa-mensagem .mensagem{
+    margin-left: 05px;
+}
+
+.bottom{
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 5%;
+    font-size: 25px;
+}
+
+input{
+    border: none;
+    color: black;
+    width: 80%;
+}
+
+.status{
+    background-color: #dcdcdc;
+}
+
+.message{
+    background-color: #ffffff;
+}
+
+.private_message{
+    background-color: #fddede;
+}
+
