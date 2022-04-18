@@ -30,13 +30,19 @@ body{
     display: flex;
     padding: 10px 0;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .caixa-mensagem .timer{
     margin-left: 05px;
+    font-weight: 200;
+    font-size: 14px;
 }
 .caixa-mensagem .nome{
     margin-left: 05px;
+    margin-right: 05px;
+    font-size: 14px;
+    font-weight: bold;
 }
 .caixa-mensagem .situacao{
     margin-left: 05px;

@@ -56,22 +56,40 @@ function atualizarMensagens(){
 
 function novasMensagens(resposta){
     tamanho = resposta.data.length -1;
+    if(resposta.data[tamanho].to !== nome && resposta.data[tamanho].to !== "Todos" && resposta.data[tamanho].type === "private_message"){
+        return;
+    }
     const novaMensagem = document.querySelector('.section');
-            novaMensagem.innerHTML += 
+    if(resposta.data[tamanho].type === "status"){
+        novaMensagem.innerHTML += 
             `<div class="caixa-mensagem ${resposta.data[tamanho].type}">
-            <div class="timer">${resposta.data[tamanho].time}</div>
+            <div class="timer">(${resposta.data[tamanho].time})</div>
             <div class="nome">${resposta.data[tamanho].from}</div>
             <div class="mensagem">${resposta.data[tamanho].text}</div>
             </div>
             `;
+    }else{
+        novaMensagem.innerHTML += 
+            `<div class="caixa-mensagem ${resposta.data[tamanho].type}">
+            <div class="timer">(${resposta.data[tamanho].time})</div>
+            <div class="nome">${resposta.data[tamanho].from}</div>
+            <div>para</div
+            <div class="destino">${resposta.data[tamanho].to}</div>
+            <div class="mensagem">${resposta.data[tamanho].text}</div>
+            </div>
+            `;
+    }
+            
 }
+
+
 
 function enviarMensagens(){ 
     let textoInput = document.querySelector("input").value;
     console.log(textoInput)
     const mensagem = {
         from: nome,
-        to: "Todos",
+        to: nome,
         text: textoInput,
         type: "message"
     }
