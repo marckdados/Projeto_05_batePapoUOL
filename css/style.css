@@ -5,6 +5,7 @@
 body{
     font-family: "Roboto", sans-serif;
     background-color: #f3f3f3;
+    overflow-x: hidden;
 }
 
 .topo{
